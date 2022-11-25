@@ -2,7 +2,7 @@ import React from 'react';
 
 const TrustedBrand = () => {
     return (
-        <section className="p-6 dark:bg-gray-800 dark:text-gray-100">
+        <section className="p-6  dark:text-base-300">
         <div className="container p-4 mx-auto text-center">
             <h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>
         </div>

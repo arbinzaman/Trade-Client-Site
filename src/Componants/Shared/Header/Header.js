@@ -25,12 +25,13 @@ const Header = () => {
                                 <li><Link to="/blogs">BLog</Link></li>
                                 <li><Link to="/login">Login</Link></li>
                                 <li><Link to="/register">Register</Link></li>
+                                <li><Link to="/catagories">All Phone</Link></li>
                             </ul>
                         </div>
                     </div>
                     <div className="navbar-center">
                         <img src="https://www.freepngimg.com/download/business/63065-business-icons-sales-trade-computer-gmail.png" className='h-12' alt="" />
-                        <Link to='/' className="btn btn-ghost normal-case text-xl">Trade</Link>
+                        <Link to='/' className="btn btn-ghost normal-case text-4xl">Trade</Link>
                     </div>
                     <div className="navbar-end">
 
