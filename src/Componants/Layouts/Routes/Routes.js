@@ -15,6 +15,7 @@ import CatagoriesCard from '../../Pages/Home/CatagoriesCard/CatagoriesCard'
 import SingleCategoryCard from '../../Pages/Home/Catagory/SingleCategoryCard'
 
 
+
 const router = createBrowserRouter([
 
     {
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
             },
             {
                 path:'/catagory/:id',
-                element:<Catagory></Catagory>,
+                element:<PrivateRoutes><Catagory></Catagory></PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`),
 
             },

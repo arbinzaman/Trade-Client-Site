@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SingleCategoryCard = ({ categoryData, setBuyNow }) => {
-    console.log(categoryData);
+    // console.log(categoryData);
     const { picture, brand, model, location, original_price, resale_price, years_of_use, posted_time, seller_name } = categoryData;
     return (
         <div >
@@ -14,7 +14,7 @@ const SingleCategoryCard = ({ categoryData, setBuyNow }) => {
                     <p>Loaction : {location}</p>
                     <p>Original Price : {original_price}</p>
                     <p>Resale Value : {resale_price}</p>
-                    <p>Years Off Use : {years_of_use}</p>
+                    <p>Years Of Use : {years_of_use}</p>
                     <div className="card-actions justify-end">
 
                     

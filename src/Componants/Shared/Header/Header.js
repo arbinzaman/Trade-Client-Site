@@ -42,8 +42,6 @@ const Header = () => {
                         </div>
                         <div className="navbar-end">
 
-                        
-
                         {
                             user?.uid ?
                                 <>
