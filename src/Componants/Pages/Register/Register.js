@@ -47,7 +47,7 @@ const Register = () => {
                             <Link rel="noopener noreferrer" href="#">Forgot Password?</Link>
                         </div>
                     </div>
-                    <button type="submit" className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">Sign Up</button>
+                    <button type="submit" className="block w-full p-3 text-center rounded-sm btn btn-primary text-black">Sign Up</button>
                 </form>
    
             

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../../Context/AuthProvider/AuthProvider';
 
 const BookingModal = ({ booking }) => {
-    const { model, resale_price, location } = booking;
+    const { model, resale_price } = booking;
+    const { user } = useContext(AuthContext);
     return (
         <>
             {/* The button to open modal */}
@@ -18,7 +20,7 @@ const BookingModal = ({ booking }) => {
                             <div className="space-y-4">
                                 <div>
 
-                                    <input type="email" name="email" id="email" defaultValue={location} disabled  className="w-full px-3 py-2 border rounded-md  bg-base-300 text-black" />
+                                    <input type="email" name="email" id="email" defaultValue={user.email} disabled  className="w-full px-3 py-2 border rounded-md  bg-base-300 text-black" />
                                 </div>
                                 <div>
             

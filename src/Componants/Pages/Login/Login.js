@@ -66,16 +66,16 @@ const Login = () => {
                 <form onSubmit={handleUserNamePassword} noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block text-black">email</label>
-                        <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md border-gray-700 bg-light text-gray-100 focus:border-violet-400" />
+                        <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md  bg-base-300 text-black focus:border-violet-400" />
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block text-black">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-light text-gray-100 focus:border-violet-400" />
+                        <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  bg-base-300 text-black focus:border-violet-400" />
                         <div className="flex justify-end text-xs text-black">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm text-gray-900 btn-primary">Sign in</button>
                 </form>
                 <div className="flex items-center  pt-4 space-x-1">
                     <div className="flex-1 h-px sm:w-16 bg-gray-700"></div>

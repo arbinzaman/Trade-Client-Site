@@ -1,25 +1,33 @@
-import React, { useEffect, useState } from 'react';
-// import { useLoaderData } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
 import SingleCategoryCard from './SingleCategoryCard';
+import BookingModal from "../../Home/BookingModal/BookingModal";
 
 const Catagory = () => {
-    const [catagoriesData , setCatagoriesData] = useState([]);
-    console.log(catagoriesData);
-    useEffect(()=>{
-        fetch('http://localhost:5000/category/1')
-        .then(res => res.json())
-        .then(data => setCatagoriesData(data));
-    },[])
-    console.log(catagoriesData);
+    const [buyNow, setBuyNow] = useState(null);
+    const catagoriesData = useLoaderData();
+    // console.log(catagoriesData);
+
+
     return (
-        <div>
+        <div className='grid md:grid-cols-3 gap-3 my-20'>
             {
-                catagoriesData.map( categoryData => <SingleCategoryCard
-                key={categoryData._id}
-                categoryData={categoryData}
+                catagoriesData.map(categoryData => <SingleCategoryCard
+                    key={categoryData._id}
+                    categoryData={categoryData}
+                    setBuyNow={setBuyNow}
                 ></SingleCategoryCard>)
             }
+
+            {
+
+                buyNow &&
+                <BookingModal
+                    booking={buyNow}
+                ></BookingModal>
+            }
         </div>
+
     );
 };
 

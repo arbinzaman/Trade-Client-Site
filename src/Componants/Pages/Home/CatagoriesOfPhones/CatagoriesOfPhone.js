@@ -13,6 +13,7 @@ const catagoriesOfPhone = ({ catagoriesOfSinglePhone , setBooking }) => {
                     <p>Loaction : {location}</p>
                     <p>Original Price : {original_price}</p>
                     <p>Resale Value : {resale_price}</p>
+                    <p>Years Of Use : {years_of_use}</p>
                     <div className="card-actions justify-end">
                         <label 
                         htmlFor="bookingModal" 

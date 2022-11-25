@@ -7,6 +7,12 @@ import Login from '../../Pages/Login/Login';
 import Register from '../../Pages/Register/Register';
 import Main from '../Main/Main';
 import ErrorPage from './ErrorPage';
+import PrivateRoutes from '../../PrivateRoutes/PrivateRoutes'
+import DashBoradLayout from '../DashBorad/DashBoardLayout';
+import DashBoard from '../../Pages/DashBoard/DashBoard';
+import SelectedItems from '../../Pages/SelectedItems/SelectedItems';
+import CatagoriesCard from '../../Pages/Home/CatagoriesCard/CatagoriesCard'
+import SingleCategoryCard from '../../Pages/Home/Catagory/SingleCategoryCard'
 
 
 const router = createBrowserRouter([
@@ -41,17 +47,34 @@ const router = createBrowserRouter([
             },
             {
                 path:'/catagories',
-                // loader: () => fetch('http://localhost:5000/catagories'),
                 element:<CatagoriesOfPhones></CatagoriesOfPhones>,
 
             },
             {
-                path:'/catagory',
+                path:'/catagory/:id',
                 element:<Catagory></Catagory>,
-                // loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+
+            },
+            {
+                path:'/catagory/:id',
+                element:<SingleCategoryCard></SingleCategoryCard>,
+                
 
             },
         ]
+    },
+    {
+        path:'/dashboard',
+        element:<PrivateRoutes><DashBoradLayout></DashBoradLayout></PrivateRoutes>,
+        children :[
+            {
+                path:'/dashboard',
+                element:<SelectedItems></SelectedItems>
+            },
+        ]
+        
     }
+
   ]);
   export default router;
