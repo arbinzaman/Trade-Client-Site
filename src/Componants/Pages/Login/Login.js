@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { GoogleAuthProvider } from "firebase/auth";
-import { GithubAuthProvider } from "firebase/auth";
+// import { GithubAuthProvider } from "firebase/auth";
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import UseTitle from '../../../Hooks/UseTitle';
 
@@ -24,6 +24,9 @@ const Login = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
+        // const dropdown = form.dropdown.value;
+        // console.log(dropdown);
+
 
 
         console.log(name, email, password);
@@ -42,7 +45,7 @@ const Login = () => {
     }
     // gitHUb Login
 
-    const githubProvider = new GithubAuthProvider();
+    // const githubProvider = new GithubAuthProvider();
 
 
     // google login
@@ -65,6 +68,13 @@ const Login = () => {
                 <h1 className="text-2xl font-bold text-center text-black">Login</h1>
                 <form onSubmit={handleUserNamePassword} noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
                     <div className="space-y-1 text-sm">
+
+                        {/* <select type="dropdown" name="dropdown" id="dropdown" className="select block w-full text-center text-black">
+                            <option disabled selected>Choose User</option>
+                            <option>User</option>
+                            <option>Seller</option>
+                        </select> */}
+
                         <label htmlFor="username" className="block text-black">email</label>
                         <input type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md  bg-base-300 text-black focus:border-violet-400" />
                     </div>
@@ -72,7 +82,7 @@ const Login = () => {
                         <label htmlFor="password" className="block text-black">Password</label>
                         <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  bg-base-300 text-black focus:border-violet-400" />
                         <div className="flex justify-end text-xs text-black">
-                            <a rel="noopener noreferrer" href="#">Forgot Password?</a>
+                            <Link rel="noopener noreferrer" href="#">Forgot Password?</Link>
                         </div>
                     </div>
                     <button className="block w-full p-3 text-center rounded-sm text-gray-900 btn-primary">Sign in</button>

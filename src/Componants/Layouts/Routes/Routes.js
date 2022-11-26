@@ -13,6 +13,9 @@ import DashBoard from '../../Pages/DashBoard/DashBoard';
 import SelectedItems from '../../Pages/SelectedItems/SelectedItems';
 import CatagoriesCard from '../../Pages/Home/CatagoriesCard/CatagoriesCard'
 import SingleCategoryCard from '../../Pages/Home/Catagory/SingleCategoryCard'
+import AllUser from '../../Pages/DashBoard/AllUsers/AllUser';
+import AddAProduct from '../../Pages/DashBoard/AddAProduct/AddAProduct';
+import AdminRoute from './AdminRoute/AdminRoute';
 
 
 
@@ -72,6 +75,14 @@ const router = createBrowserRouter([
             {
                 path:'/dashboard',
                 element:<SelectedItems></SelectedItems>
+            },
+            {
+                path:'/dashboard/allusers',
+                element:<AdminRoute><AllUser></AllUser></AdminRoute>
+            },
+            {
+                path:'/dashboard',
+                element:<AddAProduct></AddAProduct>
             },
         ]
         
