@@ -33,7 +33,7 @@ const Register = () => {
     const saveUser =(name, email ,role)=>{
         const usersSaved  ={name ,email,role};
         console.log(usersSaved);
-        fetch("http://localhost:5000/usersList", {
+        fetch("https://trade-buy-sell-arbinzaman.vercel.app/usersList", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -55,10 +55,10 @@ const Register = () => {
                 <form onSubmit={handleSubmit} noValidate="" action="" className="space-y-6 ng-untouched ng-pristine ng-valid">
 
 
-                    <select type="role" name="role" id="role" className="select block w-full text-center text-black">
+                    <select type="role" name="role" id="role" defaultValue="User" className="select block w-full text-center text-black">
                         <option disabled selected>Choose User</option>
-                        <option>User</option>
-                        <option>Seller</option>
+                        <option>user</option>
+                        <option>seller</option>
                     </select>
 
 

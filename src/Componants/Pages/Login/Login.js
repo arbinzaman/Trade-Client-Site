@@ -50,7 +50,7 @@ const Login = () => {
 
     // google login
     const { ProviderLogin } = useContext(AuthContext);
-    const googleProvider = new GoogleAuthProvider;
+    const googleProvider = new GoogleAuthProvider();
     const handleGoggleSignIn = () => {
         ProviderLogin(googleProvider)
             .then(result => {

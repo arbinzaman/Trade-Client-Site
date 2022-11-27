@@ -5,14 +5,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAk_90Hp89JMKo1w4pINRF0Ww7zIdYYWsk",
-  authDomain: "trade-153ca.firebaseapp.com",
-  projectId: "trade-153ca",
-  storageBucket: "trade-153ca.appspot.com",
-  messagingSenderId: "841315925171",
-  appId: "1:841315925171:web:9e79d4b7d83a99cca884c6"
+  apiKey: "AIzaSyDHt0pooaK8HGdxfePaoEOX3zElFbt2YGA",
+  authDomain: "trade-buy-sell.firebaseapp.com",
+  projectId: "trade-buy-sell",
+  storageBucket: "trade-buy-sell.appspot.com",
+  messagingSenderId: "25766584246",
+  appId: "1:25766584246:web:641fc0492cf823894cab17"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default app;
+export default app ;

@@ -16,6 +16,7 @@ import SingleCategoryCard from '../../Pages/Home/Catagory/SingleCategoryCard'
 import AllUser from '../../Pages/DashBoard/AllUsers/AllUser';
 import AddAProduct from '../../Pages/DashBoard/AddAProduct/AddAProduct';
 import AdminRoute from './AdminRoute/AdminRoute';
+import MyProducts from '../../Pages/DashBoard/MyProducts/MyProducts';
 
 
 
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
             {
                 path:'/catagory/:id',
                 element:<PrivateRoutes><Catagory></Catagory></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+                loader: ({params}) => fetch(`https://trade-buy-sell-arbinzaman.vercel.app/category/${params.id}`),
 
             },
             {
@@ -81,9 +82,14 @@ const router = createBrowserRouter([
                 element:<AdminRoute><AllUser></AllUser></AdminRoute>
             },
             {
-                path:'/dashboard',
+                path:'/dashboard/addaproduct',
                 element:<AddAProduct></AddAProduct>
             },
+            {
+                path:'/dashboard/myproduct',
+                element:<MyProducts></MyProducts>
+            },
+        
         ]
         
     }
