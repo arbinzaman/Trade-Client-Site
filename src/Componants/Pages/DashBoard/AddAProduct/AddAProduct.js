@@ -33,8 +33,7 @@ const AddAProduct = () => {
         const addAProduct = { model, picture, conditiontype, mobilenumber, location, resale_price, productcategory, description, years_of_use, posted_time, seller_name, original_price, yearofpurchase };
         // console.log(addAProduct);
         // console.log(picture);
-        // const pictureHostKey = process.env.REACT_APP_pictureHostKey
-    
+     
       
 
 
