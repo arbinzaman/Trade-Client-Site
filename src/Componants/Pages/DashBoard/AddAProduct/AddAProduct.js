@@ -28,12 +28,10 @@ const AddAProduct = () => {
         const seller_name = form.seller_name.value;
         const original_price = form.original_price.value;
         const yearofpurchase = form.yearofpurchase.value;
-        // picture file add state
+       
         const picture = img;
-        const addAProduct = { model, picture, conditiontype, mobilenumber, location, resale_price, productcategory, description, years_of_use, posted_time, seller_name, original_price, yearofpurchase };
-        // console.log(addAProduct);
-    
-
+       
+        
 
         const formData = new FormData();
         formData.append('image', picture);
