@@ -38,9 +38,6 @@ const AddAProduct = () => {
 
         // if (productcategory === "Apple") {
         //     const category_id = 1;
-        // }
-        // else if (productcategory === "Samsung") {
-        //     const category_id = 2;
         
 
 
