@@ -3,7 +3,7 @@ One of the biggest ,
 Second hand phone's online market.
 
 ## Live Link 
-Hosted in Netlify -> [Trade Buy-Sell](https://trade-buy-sell.web.app/) 
+Hosted in Firebase -> [Trade Buy-Sell](https://trade-buy-sell.web.app/) 
 
 ## All Products
 You can see All Products here 
