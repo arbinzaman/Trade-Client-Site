@@ -41,10 +41,7 @@ const AddAProduct = () => {
         // }
         // else if (productcategory === "Samsung") {
         //     const category_id = 2;
-        // }
-        // else if (productcategory === "OnePlus") {
-        //     const category_id = 3;
-        // }
+        
 
 
         const formData = new FormData();
