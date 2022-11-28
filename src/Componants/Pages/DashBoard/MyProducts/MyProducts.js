@@ -4,7 +4,7 @@ import MyProduct from './MyProduct';
 
 const MyProducts = () => {
 
-    const url = `http://localhost:5000/myProducts`;
+    const url = `https://trade-buy-sell-arbinzaman.vercel.app/myProducts`;
 
     const { data: myProducts = [], refetch } = useQuery({
         queryKey: ['myProducts'],
@@ -27,13 +27,14 @@ const MyProducts = () => {
         <div>
             <h1 className='text-3xl font-bold mb-10 mt-5 '>My Products</h1>
 
-
-            {
-                myProducts.map((myProduct) => <MyProduct
-                key={myProduct._id}
-                myProduct={myProduct}
-                ></MyProduct>
-                            )}
+            <div className='grid md:grid-cols-2 gap-3 my-20'>
+                {
+                    myProducts.map((myProduct) => <MyProduct
+                        key={myProduct._id}
+                        myProduct={myProduct}
+                    ></MyProduct>
+                    )}
+            </div>
         </div>
     );
 };

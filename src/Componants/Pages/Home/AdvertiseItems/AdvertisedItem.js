@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { toast } from 'react-toastify';
+import { AuthContext } from '../../../../Context/AuthProvider/AuthProvider';
 
 const AdvertisedItem = ({ advertiseItem }) => {
+    const{user} = useContext(AuthContext)
     const [displayUser, setDisplayUser] = useState();
     const {
         picture,
@@ -18,7 +20,7 @@ const AdvertisedItem = ({ advertiseItem }) => {
     const handleDeleteUser = _id => {
 
 
-        fetch(`http://localhost:5000/advertise/${_id}`, {
+        fetch(`https://trade-buy-sell-arbinzaman.vercel.app/advertise/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -48,7 +50,9 @@ const AdvertisedItem = ({ advertiseItem }) => {
                         <p>Years Of Use : {years_of_use}</p>
                         <p>Seller Name : {seller_name}</p>
                         <p>Posted Time : {posted_time}</p>
-                        {/* <button onClick={() => handleDeleteUser(advertiseItem._id)} className='btn btn-danger'>Delete</button> */}
+                        {/* {
+                          user?.role !== 'admin' &&  user?.role !== 'seller' &&  <button onClick={() => handleDeleteUser(advertiseItem._id)} className='btn btn-danger'>Delete</button>
+                        } */}
                     </div>
                 </div>
             </div>

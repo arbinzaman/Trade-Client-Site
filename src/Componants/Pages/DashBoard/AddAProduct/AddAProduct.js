@@ -49,7 +49,7 @@ const AddAProduct = () => {
 
         const formData = new FormData();
         formData.append('image', picture);
-        const url = `https://api.imgbb.com/1/upload?expiration=600&key=6cbb967e3c16f1e826cbddd427dbde87`
+        const url = `https://api.imgbb.com/1/upload?key=6cbb967e3c16f1e826cbddd427dbde87`
         fetch(url, {
             method: 'POST',
             body: formData
@@ -94,7 +94,7 @@ const AddAProduct = () => {
                     };
                     console.log(addAProduct);
 
-                    fetch('http://localhost:5000/myProducts', {
+                    fetch('https://trade-buy-sell-arbinzaman.vercel.app/myProducts', {
                         method: 'POST',
                         headers: {
                             "content-type": "application/json",

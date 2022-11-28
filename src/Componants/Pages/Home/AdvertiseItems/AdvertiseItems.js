@@ -4,7 +4,7 @@ import AdvertisedItem from './AdvertisedItem';
 
 const AdvertiseItems = () => {
 
-    const url = `http://localhost:5000/advertise`;
+    const url = `https://trade-buy-sell-arbinzaman.vercel.app/advertise`;
 
     const { data: advertiseItems = [], refetch } = useQuery({
         queryKey: ['advertise'],
@@ -15,16 +15,19 @@ const AdvertiseItems = () => {
         }
     })
     return (
+
         <div>
-             <h1 className='text-3xl font-bold mb-10 mt-5 '>Advertised Items</h1>
+            <h1 className='text-3xl font-bold mb-10 mt-5 '>Advertised Items</h1>
 
+            <div className='grid md:grid-cols-3 gap-3 my-20'>
 
-{
-    advertiseItems.map((advertiseItem) => <AdvertisedItem
-    key={advertiseItem._id}
-    advertiseItem={advertiseItem}
-    ></AdvertisedItem>
-                )}
+                {
+                    advertiseItems.map((advertiseItem) => <AdvertisedItem
+                        key={advertiseItem._id}
+                        advertiseItem={advertiseItem}
+                    ></AdvertisedItem>
+                    )}
+            </div>
         </div>
     );
 };

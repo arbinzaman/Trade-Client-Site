@@ -1,4 +1,5 @@
 import React from 'react';
+import useSeller from '../../../../Hooks/useSeller';
 import UseTitle from '../../../../Hooks/UseTitle';
 import AdvertiseItems from '../AdvertiseItems/AdvertiseItems';
 import CatagoriesCard from '../CatagoriesCard/CatagoriesCard';
@@ -9,8 +10,10 @@ import TrustedBrand from '../TrustedBrand/TrustedBrand';
 
 const Home = () => {
     UseTitle("Home")
+
     return (
         <div>
+           
             <Slider></Slider>
             <AdvertiseItems></AdvertiseItems>
             <CatagoriesCard></CatagoriesCard>

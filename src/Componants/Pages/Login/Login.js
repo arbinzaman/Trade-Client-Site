@@ -4,6 +4,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 // import { GithubAuthProvider } from "firebase/auth";
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 import UseTitle from '../../../Hooks/UseTitle';
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
@@ -33,6 +34,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
+                toast.success('Login Successfully')
                 console.log(user);
                 form.reset();
                 setError('')
@@ -43,10 +45,7 @@ const Login = () => {
         setError(error.message);
 
     }
-    // gitHUb Login
-
-    // const githubProvider = new GithubAuthProvider();
-
+  
 
     // google login
     const { ProviderLogin } = useContext(AuthContext);

@@ -18,7 +18,7 @@ const SelectedItems = () => {
     })
     return (
         <div>
-            <h1 className='text-3xl font-bold mb-10 mt-5 '>Selected Items</h1>
+            <h1 className='text-3xl font-bold mb-10 mt-5 '>Selected Items For Payment</h1>
 
 
 
