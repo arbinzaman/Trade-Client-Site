@@ -8,7 +8,7 @@ const AddAProduct = () => {
     const imageInput = (e) => {
         const file = e.target.files[0]
         setImg(file)
-        // console.log(file);
+     
     }
 
 
