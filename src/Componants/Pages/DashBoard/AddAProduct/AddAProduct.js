@@ -32,9 +32,7 @@ const AddAProduct = () => {
         const picture = img;
         const addAProduct = { model, picture, conditiontype, mobilenumber, location, resale_price, productcategory, description, years_of_use, posted_time, seller_name, original_price, yearofpurchase };
         // console.log(addAProduct);
-        // console.log(picture);
-     
-      
+    
 
 
         const formData = new FormData();
