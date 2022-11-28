@@ -34,8 +34,7 @@ const AddAProduct = () => {
         // console.log(addAProduct);
         // console.log(picture);
         // const pictureHostKey = process.env.REACT_APP_pictureHostKey
-        // console.log(pictureHostKey);
-
+    
       
 
 
