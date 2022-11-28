@@ -36,9 +36,7 @@ const AddAProduct = () => {
         // const pictureHostKey = process.env.REACT_APP_pictureHostKey
         // console.log(pictureHostKey);
 
-        // if (productcategory === "Apple") {
-        //     const category_id = 1;
-        
+      
 
 
         const formData = new FormData();
