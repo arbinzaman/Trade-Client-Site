@@ -6,7 +6,7 @@ const CatagoriesCard = () => {
 
     const navigate = useNavigate();
     const handleOneCategory = (id) => {
-        navigate(`/catagory/${id}`);
+        navigate(`/catagories/${id}`);
     };
     return (
         <div className='text-center justify-items-center '>
