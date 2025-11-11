@@ -6,7 +6,7 @@ import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const SelectedItems = () => {
     const { user } = useContext(AuthContext);
-    const url = `https://trade-buy-sell.vercel.app//items?email=${user?.email}`;
+    const url = `https://trade-buy-sell.vercel.app/items?email=${user?.email}`;
 
     const { data: items = [] } = useQuery({
         queryKey: ['items', user?.email],

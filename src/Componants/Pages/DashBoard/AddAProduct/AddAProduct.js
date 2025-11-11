@@ -80,7 +80,7 @@ const AddAProduct = () => {
                     };
                     console.log(addAProduct);
 
-                    fetch('https://trade-buy-sell.vercel.app//myProducts', {
+                    fetch('https://trade-buy-sell.vercel.app/myProducts', {
                         method: 'POST',
                         headers: {
                             "content-type": "application/json",

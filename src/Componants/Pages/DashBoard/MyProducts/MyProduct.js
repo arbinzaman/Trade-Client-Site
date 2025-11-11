@@ -24,7 +24,7 @@ const MyProduct = ({ myProduct }) => {
     const handleDeleteUser = _id => {
 
 
-        fetch(`https://trade-buy-sell.vercel.app//myProducts/${_id}`, {
+        fetch(`https://trade-buy-sell.vercel.app/myProducts/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -42,7 +42,7 @@ const MyProduct = ({ myProduct }) => {
 
     const handleAdvertise = _id => {
 
-        fetch('https://trade-buy-sell.vercel.app//advertise', {
+        fetch('https://trade-buy-sell.vercel.app/advertise', {
             method: 'POST',
             headers: {
                 "content-type": "application/json",

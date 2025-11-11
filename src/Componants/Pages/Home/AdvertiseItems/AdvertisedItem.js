@@ -20,7 +20,7 @@ const AdvertisedItem = ({ advertiseItem }) => {
     const handleDeleteUser = _id => {
 
 
-        fetch(`https://trade-buy-sell.vercel.app//advertise/${_id}`, {
+        fetch(`https://trade-buy-sell.vercel.app/advertise/${_id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
