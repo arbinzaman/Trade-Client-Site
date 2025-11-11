@@ -4,7 +4,7 @@ import AdvertisedItem from './AdvertisedItem';
 
 const AdvertiseItems = () => {
 
-    const url = `https://trade-buy-sell-arbinzaman.vercel.app/advertise`;
+    const url = `https://trade-buy-sell.vercel.app//advertise`;
 
     const { data: advertiseItems = [], refetch } = useQuery({
         queryKey: ['advertise'],

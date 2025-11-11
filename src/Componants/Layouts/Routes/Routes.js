@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://trade-buy-sell-arbinzaman.vercel.app/catagories/${params.id}`
+            `https://trade-buy-sell.vercel.app//catagories/${params.id}`
           ),
       },
       {

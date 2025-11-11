@@ -10,7 +10,7 @@ const BookingModal = ({ booking }) => {
     const [items ,setitems]= useState([]);
 
    useEffect(()=>{
-        fetch('https://trade-buy-sell-arbinzaman.vercel.app/items')
+        fetch('https://trade-buy-sell.vercel.app//items')
         .then(res=>res.json())
         .then(data=>setitems(data))
     },[items])
@@ -28,7 +28,7 @@ const BookingModal = ({ booking }) => {
          console.log(formValue);
    
         if (user?.uid) {
-            fetch("https://trade-buy-sell-arbinzaman.vercel.app/items", {
+            fetch("https://trade-buy-sell.vercel.app//items", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",

@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 const AllUser = () => {
   const [displayUser, setDisplayUser] = useState();
-  const url = `https://trade-buy-sell-arbinzaman.vercel.app/usersList`;
+  const url = `https://trade-buy-sell.vercel.app//usersList`;
 
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
@@ -18,7 +18,7 @@ const AllUser = () => {
   // handleMakeAdmin
   const handleMakeAdmin = (_id) => {
     fetch(
-      `https://trade-buy-sell-arbinzaman.vercel.app/usersList/admin/${_id}`,
+      `https://trade-buy-sell.vercel.app//usersList/admin/${_id}`,
       {
         method: "PUT",
       }
@@ -35,7 +35,7 @@ const AllUser = () => {
 
   // handleDeleteUser
   const handleDeleteUser = (_id) => {
-    fetch(`https://trade-buy-sell-arbinzaman.vercel.app/usersList/${_id}`, {
+    fetch(`https://trade-buy-sell.vercel.app//usersList/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

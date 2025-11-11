@@ -4,7 +4,7 @@ import MyProduct from './MyProduct';
 
 const MyProducts = () => {
 
-    const url = `https://trade-buy-sell-arbinzaman.vercel.app/myProducts`;
+    const url = `https://trade-buy-sell.vercel.app//myProducts`;
 
     const { data: myProducts = [], refetch } = useQuery({
         queryKey: ['myProducts'],

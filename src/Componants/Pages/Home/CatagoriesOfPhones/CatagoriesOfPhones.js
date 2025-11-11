@@ -11,7 +11,7 @@ const CatagoriesOfPhones = () => {
 
     // console.log(catagoriesOfPhones);
     useEffect(()=>{
-        fetch('https://trade-buy-sell-arbinzaman.vercel.app/catagories')
+        fetch('https://trade-buy-sell.vercel.app//catagories')
         .then(res => res.json())
         .then(data => setCategories(data));
     },[])
