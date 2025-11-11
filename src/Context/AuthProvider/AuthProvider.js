@@ -1,5 +1,5 @@
 import React from 'react';
-import {createUserWithEmailAndPassword, getAuth,  onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from  'firebase/auth'
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
 import { createContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -7,27 +7,27 @@ import app from '../../Componants/Firebase/firebase.config';
 
 
 export const AuthContext = createContext();
-const auth = getAuth (app);
+const auth = getAuth(app);
 
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [loading , setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     // Goggle Login 
-    const ProviderLogin = (Provider) =>{
+    const ProviderLogin = (Provider) => {
         setLoading(true);
-        return signInWithPopup (auth, Provider);
+        return signInWithPopup(auth, Provider);
     }
 
-        // Email Password Login 
-    const createUser =(email,password)=> {
+    // Email Password Login 
+    const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
-    const signIn = (email,password) =>{
+    const signIn = (email, password) => {
         setLoading(true);
-        return signInWithEmailAndPassword (auth , email, password);
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     // signOut
@@ -35,9 +35,9 @@ const AuthProvider = ({children}) => {
         setLoading(true);
         return signOut(auth);
     }
-
-    useEffect(()=>{
-       const unSubscribe = onAuthStateChanged(auth,(currentUser) => {
+    // logOut
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             // console.log('User Inside State change', currentUser);
             setUser(currentUser);
             setLoading(false);
@@ -45,14 +45,14 @@ const AuthProvider = ({children}) => {
         return () => {
             unSubscribe();
         }
-    },[])
-    const authInfo ={ user , loading,ProviderLogin , logOut ,createUser,signIn}
+    }, [])
+    const authInfo = { user, loading, ProviderLogin, logOut, createUser, signIn }
     return (
-       
-            <AuthContext.Provider value={authInfo}>
-                {children}
-            </AuthContext.Provider>
-     
+
+        <AuthContext.Provider value={authInfo}>
+            {children}
+        </AuthContext.Provider>
+
     );
 };
 

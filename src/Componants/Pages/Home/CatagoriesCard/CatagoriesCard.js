@@ -28,7 +28,7 @@ const CatagoriesCard = () => {
                     </div>
                 </div>
                 <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://www.androidguys.com/wp-content/uploads/2020/07/OnePlus-Logo.png" alt="Shoes" /></figure>
+                    <figure><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/OP_LU_Reg_1L_RGB_red_copy-01.svg/330px-OP_LU_Reg_1L_RGB_red_copy-01.svg.png" alt="phone" /></figure>
                     <div className="card-body">
                         <h2 className="font-bold text-xl text-center pb-2">Oneplus</h2>
                         <button className="btn btn-primary " onClick={() => handleOneCategory("3")}>Buy Now</button>
